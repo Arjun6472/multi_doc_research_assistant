@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-doc-research-assistant"
+version = "0.1.0"
+description = "A hybrid retrieval research assistant for local document collections"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+dependencies = [
+  "anthropic>=0.40,<1",
+  "beautifulsoup4>=4.12,<5",
+  "pydantic>=2.7,<3",
+  "pydantic-settings>=2.2,<3",
+  "pypdf>=5,<7",
+  "qdrant-client>=1.9,<2",
+  "rank-bm25>=0.2.2,<0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+research-assistant = "src.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

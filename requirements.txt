@@ -1,0 +1,7 @@
+anthropic>=0.40,<1
+beautifulsoup4>=4.12,<5
+pydantic>=2.7,<3
+pydantic-settings>=2.2,<3
+pypdf>=5,<7
+qdrant-client>=1.9,<2
+rank-bm25>=0.2.2,<0.3
