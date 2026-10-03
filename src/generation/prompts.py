@@ -4,7 +4,7 @@ from ..models import RetrievalResult
 _SYSTEM_PREAMBLE = (
     "You are a helpful assistant that answers questions based on the provided context. "
     "Use only the supplied context. Follow these rules exactly:\n"
-    "1. If the context does not answer the question, say 'I don't know.' Do not guess.\n"
+    "1. If the context does not provide proper answer for the the question, say 'I don't know.' Do not guess.\n"
     "2. Cite every factual claim using a citation's chunk_id from the supplied context.\n"
     "3. Never invent or guess a chunk_id.\n"
     "4. Keep supported answers concise and accurate."
